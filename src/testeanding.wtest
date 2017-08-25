@@ -1,0 +1,23 @@
+import Clientes.*
+
+test "rochensen rebota a vonLukas" {
+
+	assert.notThat(berghain.intentaEntrar(vonLukas))
+}
+test "rochensen deja pasar a bianker"{
+	
+	assert.that(berghain.intentaEntrar(bianker))
+}
+
+test "rodrigsen rebota a vonLukas" {
+	berghain.patovaDeTurno(rodrigsen)
+	assert.notThat(berghain.intentaEntrar(vonLukas))
+}
+test "rodrigsen deja pasar a gonzen" {
+	berghain.patovaDeTurno(rodrigsen)
+	assert.that(berghain.intentaEntrar(gonzen))
+}
+test "gustavoEsOrtiva" {
+	berghain.patovaDeTurno(gustavoTruccensen)
+	assert.notThat(berghain.intentaEntrar(gonzen))
+}

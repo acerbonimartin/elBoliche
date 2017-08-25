@@ -38,7 +38,7 @@ object bianker {
 	var energia=140
 	var diversion=80
 	var colorRemera="negro"
-	var edad=2
+	var edad=22
 	
 	method colorRemera(){
 		return colorRemera
@@ -112,11 +112,14 @@ object berghain{
 	method djDelDia(){
 		return djDelDia
 	}
-	method djDelDia(gorila){
-		djDelDia=gorila
+	method djDelDia(dj){
+		djDelDia=dj
+	}
+	method patovaDeTurno(gorila){
+		patovaDeTurno=gorila
 	}
 	method intentaEntrar(alguien){
-		patovaDeTurno.decideSiPasa(alguien)
+		return patovaDeTurno.decideSiPasa(alguien)
 	}
 }
 //Patovas
