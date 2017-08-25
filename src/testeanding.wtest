@@ -21,3 +21,14 @@ test "gustavoEsOrtiva" {
 	berghain.patovaDeTurno(gustavoTruccensen)
 	assert.notThat(berghain.intentaEntrar(gonzen))
 }
+
+test "vonLukas baila en main room (diversion)"{
+	mainRoom.agregarBailarin(vonLukas)
+	mainRoom.seBaila()
+	assert.that(vonLukas.diversion()==100)
+}
+test "vonLukas baila en main room (energia)"{
+	mainRoom.agregarBailarin(vonLukas)
+	mainRoom.seBaila()
+	assert.that(vonLukas.energia()==110)
+}

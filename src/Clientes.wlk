@@ -12,22 +12,28 @@ object vonLukas {
 		return edad
 	}
 	method disminuirEnergia(cantidad){
-		energia(energia-cantidad)
+		self.energia(energia-cantidad)
 	}
 	method aumentarEnergia(cantidad){
-		energia(energia+cantidad)
+		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
 		energia=energia-cantidad
 	}
 	method aumentarDiversion(cantidad){
-		diversion(diversion+cantidad)
+		self.diversion(diversion+cantidad)
 	}
 	method disminuirDiversion(cantidad){
-		diversion(cantidad-diversion)
+		self.diversion(cantidad-diversion)
 	}
 	method diversion(cantidad){
 		diversion=cantidad
+	}
+	method diversion(){
+		return diversion
+	}
+	method energia(){
+		return energia
 	}
 	method estaEnAlgunaPista(){
 		return (mainRoom.estaBailarin(self)||panoramaBar.estaBailarin(self)||darkRoom.estaBailarin(self))
@@ -47,25 +53,31 @@ object bianker {
 		return edad
 	}
 	method disminuirEnergia(cantidad){
-		energia(energia-cantidad)
+		self.energia(energia-cantidad)
 	}
 	method aumentarEnergia(cantidad){
-		energia(energia+cantidad)
+		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
 		energia=energia-cantidad
 	}
 	method aumentarDiversion(cantidad){
-		diversion(diversion+cantidad)
+		self.diversion(diversion+cantidad)
 	}
 	method disminuirDiversion(cantidad){
-		diversion(cantidad-diversion)
+		self.diversion(cantidad-diversion)
 	}
 	method diversion(cantidad){
 		diversion=cantidad
 	}
 	method estaEnAlgunaPista(){
 	return (mainRoom.estaBailarin(self)||panoramaBar.estaBailarin(self)||darkRoom.estaBailarin(self))
+	}
+		method diversion(){
+		return diversion
+	}
+	method energia(){
+		return energia
 	}
 }
 	
@@ -82,19 +94,19 @@ object gonzen {
 		return edad
 	}
 	method disminuirEnergia(cantidad){
-		energia(energia-cantidad)
+		self.energia(energia-cantidad)
 	}
 	method aumentarEnergia(cantidad){
-		energia(energia+cantidad)
+		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
 		energia=energia-cantidad
 	}
 	method aumentarDiversion(cantidad){
-		diversion(diversion+cantidad)
+		self.diversion(diversion+cantidad)
 	}
 	method disminuirDiversion(cantidad){
-		diversion(cantidad-diversion)
+		self.diversion(cantidad-diversion)
 	}
 	method diversion(cantidad){
 		diversion=cantidad
@@ -102,12 +114,17 @@ object gonzen {
 	method estaEnAlgunaPista(){
 		return (mainRoom.estaBailarin(self)||panoramaBar.estaBailarin(self)||darkRoom.estaBailarin(self))
 	}
+		method diversion(){
+		return diversion
+	}
+	method energia(){
+		return energia
+	}
 }
 	
 object berghain{
 	var patovaDeTurno=rochensen
 	var djDelDia=dixon
-	var estanDentro= #{}
 	
 	method djDelDia(){
 		return djDelDia
@@ -143,7 +160,7 @@ object gustavoTruccensen{
 
 //Pistas
 object mainRoom {
-	var bailarines= #{vonLukas}
+	var bailarines= #{}
 	
 	method agregarBailarin(bailarin){
 		bailarines.add(bailarin)
