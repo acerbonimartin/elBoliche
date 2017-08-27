@@ -216,8 +216,8 @@ object dixon {
 		bailarines.map({bailarin=> self.baila(bailarin)})
 	}
 	method baila(bailarin){
-		bailarin.disminuyeEnergia(60)
-		bailarin.aumentaDiversion(120)
+		bailarin.disminuirEnergia(60)
+		bailarin.aumentarDiversion(120)
 	}
 }
 object marcelDettmann {
@@ -226,7 +226,7 @@ object marcelDettmann {
 	}
 	method baila(bailarin){
 		bailarin.energia(0)
-		bailarin.aumentaDiversion(1000)
+		bailarin.aumentarDiversion(1000)
 	}
 }
 object tommyMunios {
@@ -234,6 +234,6 @@ object tommyMunios {
 		bailarines.map({bailarin=> self.baila(bailarin)})
 	}
 	method baila(bailarin){
-		bailarin.disminuyeEnergia(80)
+		bailarin.disminuirEnergia(80)
 	}
 }

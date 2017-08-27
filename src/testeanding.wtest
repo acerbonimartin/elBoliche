@@ -44,13 +44,19 @@ test "bianker baila panoramaBar con dixon"{
 }
 test "vonLukas baila con marcelDettmann"{
 	panoramaBar.agregarBailarin(vonLukas)
+	berghain.djDelDia(marcelDettmann)
 	panoramaBar.seBaila()
 	assert.that(vonLukas.diversion()==1070)
 	assert.that(vonLukas.energia()==0)
 }
 test "bianker baila con tommy Muñoz"{
-	panorama
+	panoramaBar.agregarBailarin(bianker)
+	berghain.djDelDia(tommyMunios)
+	panoramaBar.seBaila()
+	assert.that(bianker.energia()==60)
+	assert.that(bianker.diversion()==80)
 }	
+
 
 	
 	
