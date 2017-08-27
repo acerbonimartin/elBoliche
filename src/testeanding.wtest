@@ -1,5 +1,7 @@
 import Clientes.*
 
+
+
 test "rochensen rebota a vonLukas" {
 
 	assert.notThat(berghain.intentaEntrar(vonLukas))
@@ -22,13 +24,36 @@ test "gustavoEsOrtiva" {
 	assert.notThat(berghain.intentaEntrar(gonzen))
 }
 
-test "vonLukas baila en main room (diversion)"{
+test "vonLukas baila en main room"{
 	mainRoom.agregarBailarin(vonLukas)
 	mainRoom.seBaila()
 	assert.that(vonLukas.diversion()==100)
-}
-test "vonLukas baila en main room (energia)"{
-	mainRoom.agregarBailarin(vonLukas)
-	mainRoom.seBaila()
 	assert.that(vonLukas.energia()==110)
 }
+test "gonzen baila en mainRoom"{
+	mainRoom.agregarBailarin(gonzen)
+	mainRoom.seBaila()
+	assert.that(gonzen.diversion()==45)
+	assert.that(gonzen.energia()==50)
+	}
+test "bianker baila panoramaBar con dixon"{
+	panoramaBar.agregarBailarin(bianker)
+	panoramaBar.seBaila()
+	assert.that(bianker.energia()==80)
+	assert.that(bianker.diversion()==200)
+}
+test "vonLukas baila con marcelDettmann"{
+	panoramaBar.agregarBailarin(vonLukas)
+	panoramaBar.seBaila()
+	assert.that(vonLukas.diversion()==1070)
+	assert.that(vonLukas.energia()==0)
+}
+test "bianker baila con tommy Muñoz"{
+	panorama
+}	
+
+	
+	
+	
+	
+	

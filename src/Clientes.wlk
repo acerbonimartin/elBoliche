@@ -18,7 +18,7 @@ object vonLukas {
 		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
-		energia=energia-cantidad
+		energia=cantidad
 	}
 	method aumentarDiversion(cantidad){
 		self.diversion(diversion+cantidad)
@@ -59,7 +59,7 @@ object bianker {
 		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
-		energia=energia-cantidad
+		energia=cantidad
 	}
 	method aumentarDiversion(cantidad){
 		self.diversion(diversion+cantidad)
@@ -100,7 +100,7 @@ object gonzen {
 		self.energia(energia+cantidad)
 	}
 	method energia(cantidad){
-		energia=energia-cantidad
+		energia=cantidad
 	}
 	method aumentarDiversion(cantidad){
 		self.diversion(diversion+cantidad)
