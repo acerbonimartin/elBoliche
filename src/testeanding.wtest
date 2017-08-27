@@ -1,6 +1,7 @@
 import Clientes.*
 
 
+// patovas rebotan
 
 test "rochensen rebota a vonLukas" {
 
@@ -23,6 +24,7 @@ test "gustavoEsOrtiva" {
 	berghain.patovaDeTurno(gustavoTruccensen)
 	assert.notThat(berghain.intentaEntrar(gonzen))
 }
+//clientes bailan
 
 test "vonLukas baila en main room"{
 	mainRoom.agregarBailarin(vonLukas)
@@ -36,6 +38,8 @@ test "gonzen baila en mainRoom"{
 	assert.that(gonzen.diversion()==45)
 	assert.that(gonzen.energia()==50)
 	}
+
+//bailando segun DJ
 test "bianker baila panoramaBar con dixon"{
 	panoramaBar.agregarBailarin(bianker)
 	panoramaBar.seBaila()
@@ -56,10 +60,31 @@ test "bianker baila con tommy Muñoz"{
 	assert.that(bianker.energia()==60)
 	assert.that(bianker.diversion()==80)
 }	
+test "bailando Muchos en mainRoom"{
+	mainRoom.agregarBailarin(vonLukas)
+	mainRoom.agregarBailarin(gonzen)
+	mainRoom.agregarBailarin(bianker)
+	mainRoom.seBaila()
+	assert.that(vonLukas.diversion()==100)
+	assert.that(vonLukas.energia()==110)
+	assert.that(gonzen.diversion()==45)
+	assert.that(gonzen.energia()==50)
+	assert.that(bianker.diversion()==110)
+	assert.that(bianker.energia()==100)
+}
+test "cuantos bailan en mainRoom?"{
+	mainRoom.agregarBailarin(vonLukas)
+	mainRoom.agregarBailarin(gonzen)
+	mainRoom.agregarBailarin(bianker)
+	assert.that(mainRoom.cuantosBailan()==3)
+}
 
-
-	
-	
-	
+test "esta bailando gonzen(si)"{
+	darkRoom.agregarBailarin(gonzen)
+	assert.that(gonzen.estaEnAlgunaPista())
+	}
+test "esta bailando gonzen (no)"{
+	assert.notThat(gonzen.estaEnAlgunaPista())
+}
 	
 	
